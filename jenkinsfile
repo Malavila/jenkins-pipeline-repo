@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Compile') {
+            steps {
+                echo 'Compiling source code'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing source code'
+            }
+        }
+        stage('package') {
+            steps {
+                echo 'Creating package'
+            }
+        }
+	stage('Deploy') {
+		steps {
+			echo 'Deploying the pachage'
+		}
+	}
+    }
+}
+
